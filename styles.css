@@ -549,3 +549,13 @@ section h2::after {
     section h2 {
         font-size: 28px; /* Уменьшаем размер шрифта */
     }
+
+[data-sal] {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-sal].sal-animate {
+    opacity: 1;
+    transform: none;
+}

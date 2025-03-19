@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Свадебное приглашение</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS библиотека -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sal.js@0.8.5/dist/sal.css">
 </head>
 <body>
     <div class="desktop-layout">
@@ -21,7 +21,7 @@
                 <!-- Изображение для десктопов -->
                 <source media="(min-width: 769px)" srcset="images/main-photo-desktop.jpg">
                 <!-- Изображение по умолчанию (если браузер не поддерживает <picture>) -->
-                <img src="images/main-photo-desktop.jpg" alt="Алина и Артур">
+                <img src="images/main-photo-desktop.jpg" alt="Даня и Аня">
             </picture>
           <!--  <div class="names">Алина & Артур</div>
             <div class="vertical-date">
@@ -46,14 +46,14 @@
                         <p>С любовью, Даня и Аня!</p>
                     </div>
                 </section>
-            <section id="love-story" >
+            <section id="love-story" data-sal="slide-up" data-sal-duration="800">
                 <h2 class="takie">Такие мы вот ДА:</h2>
                 <div class="polaroid-grid">
-                    <div class="polaroid">
+                    <div class="polaroid" data-sal="slide-left" data-sal-duration="800">
                         <img src="images/photo1.jpg" alt="Наше знакомство">
                         <div class="caption">Поймаю ли я удачу за хвост когда вырасту? • 2006г.</div>
                     </div>
-                    <div class="polaroid">
+                    <div class="polaroid" data-sal="slide-right" data-sal-duration="800">
                         <img src="images/photo2.jpg" alt="Первый отпуск">
                         <div class="caption">Меня не приручить, я дикая кошка • 2007г.</div>
                     </div>
@@ -61,7 +61,7 @@
                 <p><i>*кстати, если прочитать наши инициалы наоборот - получится АД, задумайтесь 😈</i></p>
             </section>
             
-            <section id="location">
+            <section id="location" data-sal="slide-up" data-sal-duration="800">
                 <div class="location-text">
                     <h2>Место проведения</h2>
                     <p><b>ПАРК-ОТЕЛЬ "ПЕСОЧНАЯ БУХТА" <BR>г.Севастополь, ул. Ефремова, 38</b></p>
@@ -79,7 +79,7 @@
                 </div>
             </section>
 
-            <section id="timing">
+            <section id="timing" data-sal="slide-up" data-sal-duration="800">
                 <h2>Тайминг мероприятия</h2>
                 <p>Свадьба произойдет в Севастополе 25.04.2025г. 
                 <br>Точное время и место сбора гостей мы вышлем Вам чуточку позже! ❤️</p>
@@ -108,23 +108,60 @@
                     </picture>
             </section>
 
-            <section id="details" >
+            <section id="details">
                 <h2>Детали</h2>
                 <div>
                     <h3>Дресс-код</h3>
                     <p>
                     Просьба воздержаться от использования ярких и кислотных цветов, а так же, от полностью белых нарядов, оставим это для невесты.</p>
                 </div>
-                <div>
+                <div data-sal="flip-down" data-sal-duration="800">
                     <h3>Подарки </h3>
                     <p>Не беспокойтесь с выбором подарков! Либо что-то ценное, либо деньги 🤴👸<br><br>
-                        <img style="width:30%" src="images/details-gift2.png" alt="Описание изображения">
-                        <img style="width:30%" src="images/details-gift1.png" alt="Описание изображения">
-                        <img style="width:30%" src="images/details-gift2.png" alt="Описание изображения">
+                        <img 
+                            style="width:30%" 
+                            src="images/details-gift2.png" 
+                            alt="Описание изображения" 
+                            data-sal="flip-down" 
+                            data-sal-duration="800" 
+                            data-sal-delay="100"
+                        >
+                        <img 
+                            style="width:30%" 
+                            src="images/details-gift1.png" 
+                            alt="Описание изображения" 
+                            data-sal="flip-down" 
+                            data-sal-duration="800" 
+                            data-sal-delay="300"
+                        >
+                        <img 
+                            style="width:30%" 
+                            src="images/details-gift2.png" 
+                            alt="Описание изображения" 
+                            data-sal="flip-down" 
+                            data-sal-duration="800" 
+                            data-sal-delay="500"
+                        >
                         <br>
-                        <img style="width:100%" src="images/details-gift3.png" alt="Описание изображения">
+                        <!-- Вторая строка фотографий -->
+                        <img 
+                            style="width:100%" 
+                            src="images/details-gift3.png" 
+                            alt="Описание изображения" 
+                            data-sal="flip-down" 
+                            data-sal-duration="800" 
+                            data-sal-delay="700"
+                        >
                         <br>
-                        <img style="width:100%" src="images/details-gift4.png" alt="Описание изображения">
+                        <!-- Третья строка фотографий -->
+                        <img 
+                            style="width:100%" 
+                            src="images/details-gift4.png" 
+                            alt="Описание изображения" 
+                            data-sal="flip-down" 
+                            data-sal-duration="800" 
+                            data-sal-delay="900"
+                        >
                     </p>
                     <p><b>Конечно, все это шутки. Нам, действительно, очень важно, чтобы вы просто приехали! Ждем Вас, будет весело! ❤️❤️❤️</b></p>
                 </div>
@@ -210,8 +247,7 @@
         </div>
     </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/sal.js@0.8.5/dist/sal.js"></script>
+<script src="script.js"></script> <!-- Ваш файл script.js -->
 </body>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS библиотека -->
-    <script src="script.js"></script>
 </html>
