@@ -415,7 +415,7 @@ button[type="submit"]:hover {
 }
 
 #additional-info {
-    background: #187787;
+    background: #09668f;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -540,7 +540,7 @@ section h2::after {
     display: block;
     width: 60px;
     height: 2px;
-    background: #ffcccb; /* Цвет линии */
+    background: #09668f; /* Цвет линии */
     margin: 10px auto 0; /* Отступ сверху и центрирование */
 }
 
