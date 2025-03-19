@@ -1,18 +1,7 @@
 // Инициализация Sal.js
 sal({
-    threshold: 0.2, // Анимация запускается, когда элемент виден на 10%
+    threshold: 0.1, // Анимация запускается, когда элемент виден на 10%
     once: true, // Анимация повторяется при каждом скролле
-});
-
-
-// Инициализация AOS
-// В файле script.js замените инициализацию AOS на:
-AOS.init({
-  duration: 1000,
-  once: true,
-  initClassName: 'aos-init', // Важно для корректной инициализации
-  disableMutationObserver: true, // Отключаем автоматическое обнаружение новых элементов
-  startEvent: 'DOMContentLoaded' // Запуск инициализации при полной загрузке DOM
 });
 
 const weddingDate = new Date('2025-04-25').getTime();
