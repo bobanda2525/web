@@ -1,0 +1,551 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Десктопная версия */
+.desktop-layout {
+    display: grid;
+    grid-template-columns: 40% 60%; /* Левая часть - фото, правая - секции */
+    height: 100vh; /* На всю высоту экрана */
+    overflow: hidden; /* Убираем скролл для общего контейнера */
+}
+
+.main-photo-container {
+    position: relative;
+    background: ##f3ebdd; /* Фон на случай, если фото не загрузится */
+    overflow: hidden;
+}
+
+.main-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Фото растягивается на всю высоту */
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: transparent; /* Убираем фон */
+    border-radius: 0; /* Убираем скругления */
+    box-shadow: none; /* Убираем тени */
+}
+
+.names {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+}
+
+.vertical-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.date-item {
+    font-size: 36px;
+    line-height: 1;
+}
+
+.sections-container {
+    overflow-y: auto; /* Скролл для секций */
+    padding: 0px;
+    background: #f3ebdd; /* Фон для секций */
+}
+
+
+/* Для мобильной версии */
+@media (max-width: 768px) {
+    .desktop-layout {
+        display: block; /* Убираем грид */
+        height: auto;
+    }
+
+    .main-photo-container {
+        height: 300px; /* Фиксированная высота для фото */
+    }
+
+    .main-photo-container img {
+/*        height: 144%;*/
+    }
+
+    .sections-container {
+        overflow-y: visible; /* Убираем скролл */
+        padding: 0px;
+    }
+
+    section {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+}
+
+#wedding h1{
+    text-align: center;
+}
+
+.takie {
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+#love-story {
+    padding: 0; /* Убираем padding */
+    text-align: center;
+}
+
+
+#love-story .main-photo {
+    position: relative;
+    text-align: center;
+}
+
+#love-story .main-photo img {
+    width: 100%;
+    height: auto;
+}
+
+#love-story .names {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: white;
+}
+
+#love-story .floating-photos {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#love-story .floating-photos img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+#love-story .floating-photos img:hover {
+    transform: translateY(-10px);
+}
+
+/* Вертикальный текст с датой */
+.vertical-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.date-item {
+    font-size: 36px;
+    line-height: 1;
+}
+
+#location {
+    padding: 0; /* Убираем padding */
+}
+
+/* Контейнер для фотографии и карты */
+.location-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Две колонки */
+    gap: 0px; /* Расстояние между фотографией и картой */
+    align-items: center; /* Выравнивание по центру */
+}
+
+/* Фотография локации */
+.location-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px; /* Скругление углов */
+}
+
+.location-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Чтобы фотография заполняла контейнер */
+}
+
+.location-name {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.location-text {
+    padding: 20px;
+}
+
+/* Карта Яндекс */
+.map {
+    height: 100%;
+    border-radius: 0px; /* Скругление углов */
+    overflow: hidden; /* Чтобы карта не выходила за границы */
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    /* Для CSS Grid */
+    .location-container {
+        grid-template-columns: 1fr; /* Одна колонка */
+        display: block;
+    }
+
+    .location-photo {
+        height: 300px; /* Фиксированная высота для фотографии */
+    }
+
+    /* Для абсолютного позиционирования */
+    .map {
+        position: static;
+        width: 100%;
+        height: 300px; /* Фиксированная высота для карты */
+        margin-top: 0px; /* Отступ между фотографией и картой */
+    }
+}
+
+#timing #countdown {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Стили формы */
+/* Общие стили для формы */
+#rsvp {
+    background: #f8f9fa;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.form-subtitle {
+    color: #6c757d;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Стили для инпутов */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #ffcccb;
+    box-shadow: 0 0 5px rgba(255, 204, 203, 0.5);
+    outline: none;
+}
+
+/* Стили для круглых радио-кнопок */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    user-select: none;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-button {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ffcccb;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.custom-radio:hover input ~ .radio-button {
+    background-color: #ffeceb;
+}
+
+.custom-radio input:checked ~ .radio-button {
+    background-color: #ffcccb;
+    border-color: #ffcccb;
+}
+
+/* Стили для чекбоксов */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ffcccb;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+    background-color: #ffeceb;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #ffcccb;
+    border-color: #ffcccb;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Стили для кнопки */
+button[type="submit"] {
+    background: #ffcccb;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    display: block;
+    margin: 30px auto 15px;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #ffb3b0;
+}
+
+#additional-info {
+    background: #187787;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 100px;
+}
+
+@media (max-width: 768px) {
+    .polaroid-grid {
+        padding: 10px 20px 40px 20px;
+    }
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transform: rotate(3deg);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(-2deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 1;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: sepia(0.2) contrast(1.1);
+    border: 1px solid #eee;
+}
+
+.caption {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 1.4em;
+    color: #0a0a0a;
+    margin-top: 15px;
+    position: relative;
+}
+
+.caption::before {
+    content: ' ';
+    display: block;
+    width: 30%;
+    height: 1px;
+    background: #ddd;
+    margin: 8px auto;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.countdown-item {
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80px;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.countdown-item .label {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .countdown-item {
+        width: 60px;
+        padding: 8px;
+    }
+
+    .countdown-item span {
+        font-size: 1.2em;
+    }
+
+    .countdown-item .label {
+        font-size: 0.8em;
+    }
+}
+
+/* Общие стили для заголовков секций */
+section h2 {
+    font-family: 'Playfair Display', serif;  /*Красивый шрифт*/
+    font-size: 36px; /* Размер шрифта 
+    color: #333; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    margin-bottom: 20px; /* Отступ снизу */
+    position: relative;
+}
+
+/* Декоративная линия под заголовком */
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #ffcccb; /* Цвет линии */
+    margin: 10px auto 0; /* Отступ сверху и центрирование */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 28px; /* Уменьшаем размер шрифта */
+    }

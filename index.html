@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадебное приглашение</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS библиотека -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop-layout">
+        <!-- Левая часть: главная фотография -->
+        <div class="main-photo-container">
+            <picture>
+                <!-- Изображение для мобильных устройств -->
+                <source media="(max-width: 768px)" srcset="images/main-photo-mobile.jpg">
+                <!-- Изображение для десктопов -->
+                <source media="(min-width: 769px)" srcset="images/main-photo-desktop.jpg">
+                <!-- Изображение по умолчанию (если браузер не поддерживает <picture>) -->
+                <img src="images/main-photo-desktop.jpg" alt="Алина и Артур">
+            </picture>
+          <!--  <div class="names">Алина & Артур</div>
+            <div class="vertical-date">
+                    <div class="date-item">25</div>
+                    <div class="date-item">04</div>
+                    <div class="date-item">25</div>
+            </div> -->
+        </div>
+
+        <!-- Правая часть: секции -->
+        <div class="sections-container">
+                <section id="wedding">
+                    <h1>Мы женимся!</h1>
+                    <h1>25 апреля 2025г.</h1>
+                    <div>
+                    <p><b>В этот день </b>состоится праздник создания нашей семьи. </p>
+                    </div>
+                    <div>
+                        <p>И мы будем <b>счастливы видеть Вас</b> рядом с нами! 🤍</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p>С любовью, Даня и Аня!</p>
+                    </div>
+                </section>
+            <section id="love-story" >
+                <h2 class="takie">Такие мы вот ДА:</h2>
+                <div class="polaroid-grid">
+                    <div class="polaroid">
+                        <img src="images/photo1.jpg" alt="Наше знакомство">
+                        <div class="caption">Поймаю ли я удачу за хвост когда вырасту? • 2006г.</div>
+                    </div>
+                    <div class="polaroid">
+                        <img src="images/photo2.jpg" alt="Первый отпуск">
+                        <div class="caption">Меня не приручить, я дикая кошка • 2007г.</div>
+                    </div>
+                </div>
+                <p><i>*кстати, если прочитать наши инициалы наоборот - получится АД, задумайтесь 😈</i></p>
+            </section>
+            
+            <section id="location">
+                <div class="location-text">
+                    <h2>Место проведения</h2>
+                    <p><b>ПАРК-ОТЕЛЬ "ПЕСОЧНАЯ БУХТА" <BR>г.Севастополь, ул. Ефремова, 38</b></p>
+                </div>
+                <div class="location-container">
+                    <!-- Фотография локации -->
+                    <div class="location-photo">
+                        <img src="images/location.jpg" alt="Локация">
+                    </div>
+
+                    <!-- Карта Яндекс -->
+                    <div class="map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A...&ll=33.482960%2C44.606470&z=15"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section id="timing">
+                <h2>Тайминг мероприятия</h2>
+                <p>Свадьба произойдет в Севастополе 25.04.2025г. 
+                <br>Точное время и место сбора гостей мы вышлем Вам чуточку позже! 🤍</p>
+                <h1 style="text-align:center;">УВИДИМСЯ С ВАМИ ЧЕРЕЗ:</h1>
+                <div id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span class="label">Дней</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span class="label">Часов</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span class="label">Минут</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span class="label">Секунд</span>
+                    </div>
+                </div>
+                <div class="main-photo-container">
+                    <picture>
+                        <img src="images/timing.jpg" alt="Даня и Аня">
+                    </picture>
+            </section>
+
+            <section id="details" >
+                <h2>Детали</h2>
+                <div>
+                    <h3>Дресс-код</h3>
+                    <p>
+                    Просьба воздержаться от использования ярких и кислотных цветов, а так же, от полностью белых нарядов, оставим это для невесты.</p>
+                </div>
+                <div>
+                    <h3>Подарки </h3>
+                    <p>Не беспокойтесь с выбором подарков! Либо что-то ценное, либо деньги 🤴👸<br><br>
+                        <img style="width:30%" src="images/details-gift2.png" alt="Описание изображения">
+                        <img style="width:30%" src="images/details-gift1.png" alt="Описание изображения">
+                        <img style="width:30%" src="images/details-gift2.png" alt="Описание изображения">
+                        <br>
+                        <img style="width:100%" src="images/details-gift3.png" alt="Описание изображения">
+                        <br>
+                        <img style="width:100%" src="images/details-gift4.png" alt="Описание изображения">
+                    </p>
+                    <p><b>Конечно, все это шутки. Нам, действительно, очень важно, чтобы вы просто приехали! Ждем Вас, будет весело! ❤️❤️❤️</b></p>
+                </div>
+            </section>
+
+<!--             <section id="rsvp" >
+                <h2>ПРОСИМ ВАС ОТВЕТИТЬ НА НЕСКОЛЬКО ВОПРОСОВ</h2>
+                <p class="form-subtitle">Это поможет нам в организации</p>
+                <form id="rsvp-form">
+                    <div class="form-group">
+                        <label>ВАШЕ ИМЯ И ФАМИЛИЯ</label>
+                        <input type="text" placeholder="Например: Анна Иванова" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ЕСЛИ ВЫ БУДЕТЕ НЕ ОДНИ – ВНЕСИТЕ ИМЯ ПАРЫ</label>
+                        <input type="text" placeholder="Например: Алексей Петров">
+                    </div>
+                    <div class="form-group">
+                        <label>СМОЖЕТЕ ЛИ ВЫ ПРИСУТСТВОВАТЬ?</label>
+                        <div class="radio-group">
+                            <label class="custom-radio">
+                                <input type="radio" name="attendance" value="yes" required>
+                                <span class="radio-button"></span>
+                                СМОГУ / СМОЖЕМ ПРИСУТСТВОВАТЬ
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="attendance" value="no">
+                                <span class="radio-button"></span>
+                                НЕ СМОГУ ПРИЙТИ
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>ПРЕДПОЧТЕНИЯ НАПИТКАМ </label>
+                        <div class="checkbox-grid">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="drinks" value="champagne">
+                                <span class="checkmark"></span>
+                                ШАМПАНСКОЕ
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="drinks" value="white_wine">
+                                <span class="checkmark"></span>
+                                БЕЛОЕ ВИНО
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="drinks" value="red_wine">
+                                <span class="checkmark"></span>
+                                КРАСНОЕ ВИНО
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="drinks" value="vodka">
+                                <span class="checkmark"></span>
+                                ВОДКА
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="drinks" value="cognac">
+                                <span class="checkmark"></span>
+                                КОНЬЯК
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="drinks" value="whiskey">
+                                <span class="checkmark"></span>
+                                ВИСКИ
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="drinks" value="non_alcohol">
+                                <span class="checkmark"></span>
+                                БЕЗАЛКОГОЛЬНЫЕ
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit">ОТПРАВИТЬ ОТВЕТ</button>
+                </form>
+            </section> -->
+
+            <section id="additional-info">
+                <h2>Дополнительная информация</h2>
+                <p>Если вы захотите подготовить сюрприз, наши организаторы с удовольствием помогут вам и ответят на все вопросы!<br>
+                    <br>Телефоны для связи:<br> + 7 915 545 99 39 - Ольга <br>+7 978 794 1629 - Анна<br>Волна, Телеграм, Вотсап</p>
+                <p>Спасибо, что разделите с нами этот особенный день!</p>
+            </section>
+        </div>
+    </div>
+
+
+</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS библиотека -->
+    <script src="script.js"></script>
+</html>
